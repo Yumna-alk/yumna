@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Application</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wall.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #ffffff10;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            font-size: 36px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        label {
+            font-size: 18px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .btn {
+            width: 200px;
+            padding: 15px 20px;
+            background-color: #1f293a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            outline: none;
+            font-size: 16px;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #0e1822;
+        }
+        .btn:active {
+            transform: translateY(2px);
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .credit {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="medical-icon.png" alt="Logo" class="logo">
+        <p class="credit">By Wafa&Hanadi&Yumna</p>
+
+        <p>Please fill in the patient details:</p>
+        <form action="save_patient_record.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="file_number">File Number:</label>
+            <input type="text" id="file_number" name="file_number" required>
+            <label for="illnesses">Illnesses:</label>
+            <textarea id="illnesses" name="illnesses" rows="4" required></textarea>
+            <button type="submit" class="btn">Save Record</button>
+        </form>
+    </div>
+</body>
+</html>

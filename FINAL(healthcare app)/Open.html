@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Application</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wall.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #ffffff10;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            font-size: 36px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #2E8B57;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn {
+            width: 200px;
+            padding: 15px 20px;
+            background-color: #1f293a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            outline: none;
+            font-size: 16px;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #0e1822;
+        }
+        .btn:active {
+            transform: translateY(2px);
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .credit {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="medical-icon.png" alt="Logo" class="logo">
+        <p class="credit">By Wafa&Hanadi&Yumna</p>
+        <h1>Welcome to WeCare</h1>
+        <p>Please choose an option below:</p>
+        <div class="btn-container">
+            <a href="http://127.0.0.1:3000/booking.html" class="btn">Book Appointment</a>
+            <a href="http://127.0.0.1:3000/sign up.html" class="btn">Medical Records</a>
+            <a href="health_tips.html" class="btn">Health Tips</a>
+        </div>
+    </div>
+</body>
+</html>

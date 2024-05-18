@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wall.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #ffffff10;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            font-size: 36px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #calendar {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .credit {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="medical-icon.png" alt="Logo" class="logo">
+        <p class="credit">By Wafa&Hanadi&Yumna</p>
+        <h1>Available Doctors Calendar</h1>
+        <div id="calendar"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                // Configuration options
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                initialView: 'dayGridMonth',
+                events: {
+                    url: 'fetch_doctor_availability.php', // URL to fetch events
+                    method: 'POST',
+                    extraParams: {
+                        // Any extra parameters you want to send to the server
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

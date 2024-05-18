@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Application</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wall.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-box input {
+            width: 100%;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #2c4766;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1em;
+            color: #fff;
+            padding: 0 15px;
+            transition: .5s ease;
+            display: block;
+            box-sizing: border-box;
+        }
+        .input-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: .9em;
+            color: #ffffff;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s ease;
+            box-sizing: border-box;
+        }
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -25px;
+            font-size: .7em;
+            background: #1f293a;
+            padding: 0 6px;
+            color: #c6d5d6;
+            border-radius: 20px;
+        }
+        .forgot-pass a {
+            font-size: .8em;
+            color: #fff;
+            text-decoration: none;
+        }
+        .forgot-pass a:hover {
+            text-decoration: underline;
+        }
+        .btn-login {
+            width: 100%;
+            height: 50px;
+            background: #0ef;
+            border: none;
+            outline: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #1f293a;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn-login:hover {
+            background-color: #0cf;
+        }
+        .signup-link {
+            font-size: .9em;
+            color: #1f293a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+      
+        <img src="medical-icon.png" alt="Logo" class="logo">
+        <p class="credit">By Wafa&Hanadi&Yumna</p>
+        <h2>Welcome to WeCare</h2>
+        <a href="http://127.0.0.1:3000/login.html" class="btn-login">Login</a>
+        
+        <div class="signup-link">
+            <a href="http://127.0.0.1:3000/sign up.html" class="btn-login">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
